@@ -10,24 +10,24 @@ package ru.gotoandstop.ui{
 	 * @author Roman Timashev (roman@tmshv.ru)
 	 */
 	public class MainScreen extends Screen{
-		private var view:View;
+//		private var view:View;
 		public function MainScreen(key:String){
 			super(key);
 			this.init();
 		}
 		
 		private function init():void{
-			this.view = new View();
+//			this.view = new View();
 		}
 		
-		public override function getView():DisplayObject{
-			return this.view;
-		}
+//		public override function getView():DisplayObject{
+//			return this.view;
+//		}
 		
 		public override function enable():void{
-			var comm:ICommand = new ActivateScreenSoftCommand(super.machine, 'c');
-			super.temps.push(new ButtonController(this.view, comm));
-			super.enable();
+//			var comm:ICommand = new ActivateScreenSoftCommand(super.machine, 'c');
+//			super.temps.push(new ButtonController(this.view, comm));
+//			super.enable();
 		}
 		//		
 		public override function disable():void{

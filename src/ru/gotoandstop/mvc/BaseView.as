@@ -1,7 +1,4 @@
 package ru.gotoandstop.mvc{
-	import adiwars.core.Context;
-	import adiwars.core.IContextDependent;
-	
 	import flash.display.Sprite;
 	
 	/**
@@ -14,15 +11,9 @@ package ru.gotoandstop.mvc{
 			return this._model;
 		}
 		
-		private var _context:Context;
-		public function get context():Context{
-			return this._context;
-		}
-		
-		public function BaseView(model:IModel, context:Context){
+		public function BaseView(model:IModel){
 			super();
 			this._model = model;
-			this._context = context;
 		}		
 	}
 }

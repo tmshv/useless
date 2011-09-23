@@ -1,5 +1,4 @@
 package ru.gotoandstop.ui.dialogs{
-	import adiwars.core.Context;
 	import ru.gotoandstop.mvc.BaseController;
 	import ru.gotoandstop.mvc.IModel;
 	
@@ -15,13 +14,13 @@ package ru.gotoandstop.ui.dialogs{
 			return this.dialogs;
 		}
 		
-		public function DialogManager(container:DisplayObjectContainer, context:Context){
-			super(container, context);
+		public function DialogManager(container:DisplayObjectContainer){
+			super(container);
 			this.init();
 		}
 		
 		private function init():void{
-			this.dialogs = new DialogsContainer(this, super.context);
+			this.dialogs = new DialogsContainer(this);
 			super.container.addChild(this.dialogs);
 		}
 		

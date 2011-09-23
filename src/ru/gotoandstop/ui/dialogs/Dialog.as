@@ -1,7 +1,5 @@
 package ru.gotoandstop.ui.dialogs{
-	import adiwars.core.Context;
 	import ru.gotoandstop.mvc.BaseController;
-	import ru.gotoandstop.lolwille.ui.UICommandEvent;
 	import ru.gotoandstop.ui.UIElement;
 	
 	import flash.display.DisplayObject;
@@ -20,9 +18,9 @@ package ru.gotoandstop.ui.dialogs{
 		}
 		protected var manager:DialogManager;
 		
-		public function Dialog(context:Context){
-			super(context.dialogManager.container, context);
-			this.manager = context.dialogManager;
+		public function Dialog(){
+//			super(context.dialogManager.container, context);
+//			this.manager = context.dialogManager;
 		}
 		
 		protected function add():void{
@@ -30,7 +28,7 @@ package ru.gotoandstop.ui.dialogs{
 		}
 		
 		public function close():void{
-			super.dispatchEvent(UICommandEvent.command('close'));
+			
 		}
 	}
 }

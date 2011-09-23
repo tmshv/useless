@@ -1,6 +1,4 @@
-package ru.gotoandstop.screen{
-	import adiwars.core.Context;
-	
+package ru.gotoandstop.screen{	
 	import flash.display.DisplayObject;
 	import flash.display.DisplayObjectContainer;
 	

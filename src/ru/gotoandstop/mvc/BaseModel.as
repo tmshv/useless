@@ -1,7 +1,4 @@
-package ru.gotoandstop.mvc{
-	import adiwars.core.Context;
-	import adiwars.core.IContextDependent;
-	
+package ru.gotoandstop.mvc{	
 	import flash.events.EventDispatcher;
 	import flash.events.IEventDispatcher;
 	
@@ -9,17 +6,11 @@ package ru.gotoandstop.mvc{
 	 *
 	 * @author Timashev Roman
 	 */
-	public class BaseModel extends EventDispatcher implements IModel, IContextDependent{
+	public class BaseModel extends EventDispatcher implements IModel{
 		protected var locked:Boolean;
 		
-		private var _context:Context;
-		public function get context():Context{
-			return this._context;
-		}
-		
-		public function BaseModel(context:Context){
+		public function BaseModel(){
 			super();
-			this._context = context;
 		}
 		
 		public function update():void{

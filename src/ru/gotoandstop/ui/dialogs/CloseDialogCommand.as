@@ -19,7 +19,7 @@ package ru.gotoandstop.ui.dialogs{
 		}
 		
 		private function onHideComplete():void{
-			this.dialog.container.removeChild(this.dialog.clip);
+//			this.dialog.container.removeChild(this.dialog.clip);
 		}
 	}
 }

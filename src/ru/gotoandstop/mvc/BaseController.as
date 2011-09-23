@@ -1,7 +1,4 @@
 package ru.gotoandstop.mvc{
-	import adiwars.core.Context;
-	import adiwars.core.IContextDependent;
-	
 	import flash.display.DisplayObjectContainer;
 	import flash.events.EventDispatcher;
 	import flash.events.IEventDispatcher;
@@ -10,7 +7,7 @@ package ru.gotoandstop.mvc{
 	 *
 	 * @author Timashev Roman
 	 */
-	public class BaseController extends EventDispatcher implements IController, IContextDependent{
+	public class BaseController extends EventDispatcher implements IController{
 		private var _container:DisplayObjectContainer;
 		public function get container():DisplayObjectContainer{
 			return this._container;
@@ -19,18 +16,9 @@ package ru.gotoandstop.mvc{
 			this._container = value;
 		}
 		
-		private var _context:Context;
-		public function get context():Context{
-			return this._context;
-		}
-		public function set context(value:Context):void{
-			this._context = value;
-		}
-		
-		public function BaseController(container:DisplayObjectContainer, context:Context){
+		public function BaseController(container:DisplayObjectContainer){
 			super();
 			this.container = container;
-			this.context = context;
 		}
 	}
 }

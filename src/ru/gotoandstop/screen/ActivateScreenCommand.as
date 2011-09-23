@@ -7,9 +7,9 @@ package ru.gotoandstop.screen{
 	 * @author Roman Timashev (roman@tmshv.ru)
 	 */
 	public class ActivateScreenCommand implements ICommand{
-		private var screen:Screen2;
+		private var screen:Screen;
 		
-		public function ActivateScreenCommand(state:Screen2){
+		public function ActivateScreenCommand(state:Screen){
 			this.screen = state;
 		}
 		

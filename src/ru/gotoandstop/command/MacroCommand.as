@@ -38,7 +38,7 @@ package ru.gotoandstop.command{
 					command.execute();
 					this.doAfterExecuting();
 				}else{
-					this.isWorking = false;
+//					this.isWorking = false;
 				}
 			}
 		}
@@ -48,26 +48,8 @@ package ru.gotoandstop.command{
 			this.executeNext();			
 		}
 		
-		public function undo():void{
-			this.current = this.commands.length - 1;
-		}
-		
-		private function executeNext():void{
-			var complete_executing:Boolean = (this.current >= this.commands.length);
-			if(!complete_executing){
-				var command:ICommand = this.commands[this.current];
-				if(command){
-					command.execute();
-					this.doAfterExecuting();
-				}else{
-					this.isWorking = false;
-				}
-			}
-		}
-		
-		private function doAfterExecuting():void{
-			this.current ++;
-			this.executeNext();			
-		}
+//		public function undo():void{
+//			this.current = this.commands.length - 1;
+//		}
 	}
 }
