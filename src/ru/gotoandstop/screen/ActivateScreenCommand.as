@@ -16,9 +16,5 @@ package ru.gotoandstop.screen{
 		public function execute():void{
 			this.screen.activate();
 		}
-		
-		public function undo():void{
-			
-		}
 	}
 }

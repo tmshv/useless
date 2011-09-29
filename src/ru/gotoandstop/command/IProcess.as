@@ -1,7 +1,6 @@
-package ru.gotoandstop.processes{
+package ru.gotoandstop.command{
 	import flash.events.IEventDispatcher;
 	
-	import ru.gotoandstop.command.ICommand;
 
 	/**
 	 *
