@@ -7,7 +7,7 @@ package ru.gotoandstop.screen{
 	 *
 	 * @author Roman Timashev (roman@tmshv.ru)
 	 */
-	public interface IScreenBehavior extends IEventDispatcher{
+	public interface IScreenSwitcher extends IEventDispatcher{
 		function action(active:IScreen, next:IScreen):void;	
 	}
 }

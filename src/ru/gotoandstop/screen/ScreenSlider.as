@@ -12,7 +12,7 @@ package ru.gotoandstop.screen{
 	 * Контейнер состояний
 	 * @author Roman Timashev (roman@tmshv.ru)
 	 */
-	public class ScreenSlider extends EventDispatcher implements IScreenBehavior{
+	public class ScreenSlider extends EventDispatcher implements IScreenSwitcher{
 		private var active:IScreen;
 		private var next:IScreen;
 		

@@ -12,7 +12,7 @@ package ru.gotoandstop.screen{
 	 * 
 	 * @author Roman Timashev (roman@tmshv.ru)
 	 */
-	public class ScreenFader extends EventDispatcher implements IScreenBehavior{
+	public class ScreenFader extends EventDispatcher implements IScreenSwitcher{
 		private var active:IScreen;
 		private var next:IScreen;
 		
