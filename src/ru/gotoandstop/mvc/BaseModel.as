@@ -28,5 +28,13 @@ package ru.gotoandstop.mvc{
 		public function unlock():void{
 			this.locked = false;
 		}
+		
+		public function get isLocked():Boolean{
+			return this.locked;
+		}
+		
+		public function dispose():void{
+			
+		}
 	}
 }
