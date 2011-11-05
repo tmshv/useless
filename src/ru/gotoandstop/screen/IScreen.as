@@ -2,7 +2,7 @@ package ru.gotoandstop.screen{
 	import flash.display.DisplayObject;
 	import flash.events.IEventDispatcher;
 	
-	import ru.gotoandstop.ui.ILockable;
+	import ru.gotoandstop.ILockable;
 
 	public interface IScreen extends IEventDispatcher, ILockable{
 		function get machine():ScreenMachine;

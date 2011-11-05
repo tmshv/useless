@@ -4,6 +4,7 @@ package ru.gotoandstop.ui{
 	
 	import ru.gotoandstop.IDisposable;
 	import ru.gotoandstop.mvc.BaseController;
+	import ru.gotoandstop.ILockable;
 	
 	/**
 	 *
