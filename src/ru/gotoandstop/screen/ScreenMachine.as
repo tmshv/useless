@@ -59,11 +59,11 @@ package ru.gotoandstop.screen{
 		/**
 		 * Экземпляр объекта-переключателя экранов 
 		 */		
-		private var _behavior:IScreenBehavior;
-		public function get behavior():IScreenBehavior{
+		private var _behavior:IScreenSwitcher;
+		public function get behavior():IScreenSwitcher{
 			return this._behavior;
 		}
-		public function set behavior(value:IScreenBehavior):void{
+		public function set behavior(value:IScreenSwitcher):void{
 			if(!this.worked){
 				if(this._behavior){
 					this._behavior.removeEventListener(Event.COMPLETE, this.handleBehaviorActionComplete);

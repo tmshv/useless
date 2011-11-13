@@ -11,7 +11,7 @@ package ru.gotoandstop.screen{
 	 *
 	 * @author Roman Timashev (roman@tmshv.ru)
 	 */
-	public class ScreenZoomer extends EventDispatcher implements IScreenBehavior{
+	public class ScreenZoomer extends EventDispatcher implements IScreenSwitcher{
 		private var active:IScreen;
 		private var next:IScreen;
 		
