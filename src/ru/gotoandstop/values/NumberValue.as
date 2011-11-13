@@ -20,6 +20,7 @@ package ru.gotoandstop.values{
 		
 		public function NumberValue(value:Number=0){
 			super();
+			this.value = value;
 		}
 		
 		public function getValue():*{
