@@ -7,6 +7,14 @@ package ru.gotoandstop.values{
 	 * @author Roman Timashev (roman@tmshv.ru)
 	 */
 	public class StringValue extends EventDispatcher implements IValue{
+		private var _name:String;
+		public function get name():String{
+			return this._name;
+		}
+		public function set name(value:String):void{
+			this._name = value;
+		}
+		
 		private var _value:String;
 		public function get value():String{
 			return this._value;
