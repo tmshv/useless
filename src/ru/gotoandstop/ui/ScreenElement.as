@@ -6,6 +6,10 @@
  */
 package ru.gotoandstop.ui {
 import flash.events.Event;
+import flash.events.MouseEvent;
+import flash.geom.Point;
+
+import flashx.textLayout.operations.PasteOperation;
 
 import ru.gotoandstop.ui.Element;
 
@@ -23,16 +27,7 @@ public class ScreenElement extends Element{
         onStage();
     }
 
-    private function handleLoopEvent(event:Event):void{
-        lastLoopEvent = event;
-        loop();
-    }
-
     protected function onStage():void{
-
-    }
-
-    protected function loop():void{
 
     }
 
@@ -46,6 +41,31 @@ public class ScreenElement extends Element{
     public function disableLoop():void{
         removeEventListener(listeningLoopEvent, handleLoopEvent);
         listeningLoopEvent = null;
+    }
+
+    private function handleLoopEvent(event:Event):void{
+        lastLoopEvent = event;
+        loop();
+    }
+
+    protected function loop():void{
+
+    }
+
+    public function enableClick():void{
+        addEventListener(MouseEvent.CLICK, handleClick);
+    }
+
+    public function disableClick():void{
+        removeEventListener(MouseEvent.CLICK, handleClick);
+    }
+
+    private function handleClick(event:MouseEvent):void {
+        click(new Point(event.stageX, event.stageY))
+    }
+
+    protected function click(coord:Point):void{
+
     }
 }
 }
