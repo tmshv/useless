@@ -23,7 +23,15 @@ package ru.gotoandstop.ui{
 		}
 		
 		private function handleClick(event:MouseEvent):void{
-			this.command.execute();
+			this.command.execute({
+                x:event.localX,
+                y:event.localY,
+                stageX:event.stageX,
+                stageY:event.stageY,
+                alt:event.altKey,
+                ctr:event.ctrlKey,
+                shift:event.shiftKey
+            });
 		}
 		
 		public function dispose():void{
