@@ -1,4 +1,4 @@
-package ru.gotoandstop.ui{
+package ru.gotoandstop{
 	/**
 	 *
 	 * @author Roman Timashev (roman@tmshv.ru)
