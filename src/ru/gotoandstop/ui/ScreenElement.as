@@ -20,6 +20,14 @@ public class ScreenElement extends Element {
     public var lastLoopEvent:Event;
     private var _listeningLoopEvent:String;
 
+    public function get stageWidth():uint{
+        return stage ? stage.stageWidth : 0;
+    }
+
+    public function get stageHeight():uint{
+        return stage ? stage.stageHeight : 0;
+    }
+
     public function ScreenElement() {
         addEventListener(Event.ADDED_TO_STAGE, handleAddedToStage);
     }
