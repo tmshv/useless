@@ -5,6 +5,8 @@
  * Time: 6:44 PM
  */
 package ru.gotoandstop.ui {
+import flash.display.StageAlign;
+import flash.display.StageScaleMode;
 import flash.events.Event;
 import flash.events.MouseEvent;
 import flash.geom.Point;
@@ -20,6 +22,13 @@ public class ScreenElement extends Element{
 
     public function ScreenElement() {
         addEventListener(Event.ADDED_TO_STAGE, handleAddedToStage);
+    }
+
+    public function setBasicStageLayout(aling:String=StageAlign.TOP_LEFT, scale:String = StageScaleMode.NO_SCALE):void{
+        if(stage) {
+            stage.align = aling;
+            stage.scaleMode = scale;
+        }
     }
 
     private function handleAddedToStage(event:Event):void{
