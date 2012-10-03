@@ -8,6 +8,7 @@ package ru.gotoandstop.ui {
 import flash.display.StageAlign;
 import flash.display.StageScaleMode;
 import flash.events.Event;
+import flash.events.IEventDispatcher;
 import flash.events.MouseEvent;
 import flash.geom.Point;
 
@@ -19,6 +20,7 @@ public class ScreenElement extends Element {
     public var loopEvent:String = Event.ENTER_FRAME;
     public var lastLoopEvent:Event;
     private var _listeningLoopEvent:String;
+    private var _clickTarget:IEventDispatcher;
 
     public function get stageWidth():uint{
         return stage ? stage.stageWidth : 0;
@@ -71,12 +73,18 @@ public class ScreenElement extends Element {
 
     }
 
-    public function enableClick():void {
-        addEventListener(MouseEvent.CLICK, handleClick);
+    public function enableClick(targetIsStage:Boolean=false):void {
+        _clickTarget = targetIsStage ? stage : this;
+        if(_clickTarget) {
+            _clickTarget.addEventListener(MouseEvent.CLICK, handleClick);
+        }
     }
 
     public function disableClick():void {
-        removeEventListener(MouseEvent.CLICK, handleClick);
+        if(_clickTarget) {
+            _clickTarget.removeEventListener(MouseEvent.CLICK, handleClick);
+            _clickTarget = null;
+        }
     }
 
     private function handleClick(event:MouseEvent):void {
