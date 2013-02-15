@@ -8,7 +8,7 @@ package ru.gotoandstop.ui {
 import flash.display.DisplayObject;
 import flash.display.Sprite;
 
-public class Element extends Sprite {
+public class Element extends Sprite implements IElement {
     public function Element() {
         super();
     }
