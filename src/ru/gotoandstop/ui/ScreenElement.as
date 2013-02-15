@@ -12,10 +12,6 @@ import flash.events.IEventDispatcher;
 import flash.events.MouseEvent;
 import flash.geom.Point;
 
-import flashx.textLayout.operations.PasteOperation;
-
-import ru.gotoandstop.ui.Element;
-
 public class ScreenElement extends Element {
     public var loopEvent:String = Event.ENTER_FRAME;
     public var lastLoopEvent:Event;
